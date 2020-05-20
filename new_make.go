@@ -28,6 +28,6 @@ func main() {
 	// 因为 new(Foo) 返回的是一个指向 nil 的指针，它尚未被分配内存
 	u := new(Foo)
 	fmt.Printf("%T  %v\n", u, u)
-	(*u)["x"] = "goodbye"
-	(*u)["y"] = "world"
+	//(*u)["x"] = "goodbye"
+	//(*u)["y"] = "world"
 }

@@ -47,5 +47,17 @@ func main() {
 	mapList3 := map[string]int{}	// 定义的同时也分配了内存，等同于 mapList3 := make(map[string]int)
 	fmt.Printf("mapList3 type:%T, mapList3 value:%#v\n",
 		mapList3, mapList3)
-
+        
+       
+        fmt.Println("获取一个不存在的key")
+        mapList3["not"] = 100
+        val, exists := mapList3["not"] // exists是bool值，如果要获取的key存在则返回 true,否则 返回false
+        fmt.Println(val, exists)
+        
+        fmt.Println("=========")
+        var mapList4 map[string]int
+        // mapList4["new"] = 300  // 没有make就使用，会报错
+        mapList4 = make(map[string]int) 
+        mapList4["old"] = 400 // make之后就可以使用
+        fmt.Println(mapList4)
 }
