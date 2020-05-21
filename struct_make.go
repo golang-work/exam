@@ -34,4 +34,15 @@ func main() {
 
 	fmt.Printf("p1 type:%T, value:%v\n", p1, p1)
 	fmt.Printf("p2 type:%T, value:%v\n", p2, p2)
+
+	// 定义方式三
+	student := struct{
+		name string
+		age int
+	}{
+		"qing",
+		10,
+	}
+
+	fmt.Println(student)
 }
