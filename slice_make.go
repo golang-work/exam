@@ -28,4 +28,9 @@ func main() {
 
 	slice3 := []int{1, 3, 4}
 	fmt.Println(slice3, len(slice3), cap(slice3))
+
+	var slice4 []int  // nil
+	// slice4[0] = 10	  // 直接赋值会出错，没有分配内存空间
+	slice4 = append(slice4, 10, 20, 30)	// 不mark，直接append
+	fmt.Println(slice4)
 }

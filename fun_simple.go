@@ -2,8 +2,16 @@ package main
 
 import "fmt"
 
+type fun1 func(...interface{})
 
 func main() {
+	var aaa fun1	// 函数类型零值是nil
+	fmt.Println(aaa)
+	aaa = func(s ...interface{}) {
+		fmt.Println(s...)
+	}
+	aaa("str", "ok", "...")
+
 	fmt.Println(multiPly3Nums(1, 2,3))
 }
 
